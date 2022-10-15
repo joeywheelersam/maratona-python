@@ -1,0 +1,4 @@
+print () = imprime na tela mensagem de texto ou resultado da variável.
+type(variável) = informa o tipo da variável.
+str (variável) = converte qualquer variável para o tipo de string.
+int(variável) = converte qualquer variável para o tipo numérico.
