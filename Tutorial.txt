@@ -1,0 +1,16 @@
+Aula 1 - Variables, Data Types and Operators
+
+Variables (variável): armazena valores (dados) e reutilizar esses valores no nosso código.
+
+Data Types ():
+
+Operators ():
+
+Documentação
+    Inglês: https://docs.python.org/3/
+    Português: https://docs.python.org/pt-br/3/
+
+Outros:
+    https://www.w3schools.com/python/python_variables.asp
+    https://www.w3schools.com/python/python_datatypes.asp
+    https://www.w3schools.com/python/python_operators.asp
