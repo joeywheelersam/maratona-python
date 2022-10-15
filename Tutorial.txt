@@ -1,7 +1,6 @@
-Aula 1 - Variables, Data Types and Operators
+Aula 01 - Variables, Data Types and Operators
 
 Variables (variável): armazena valores (dados) e reutilizar esses valores no nosso código.
-
 
 Data Types (tipos de dados)
     Numbers (números): tipos numéricos (3, -20 ou 10.50).
@@ -12,11 +11,42 @@ Data Types (tipos de dados)
 Operators (operadores): operações que podemos fazer entre os tipos de dados (+ - / %)
     Obs.: conseguimos concatenar duas strings usando o operador de soma ( + )
 
-Documentação
-    Inglês: https://docs.python.org/3/
-    Português: https://docs.python.org/pt-br/3/
+Materiais de Apoio:
+    Documentação em Inglês: https://docs.python.org/3/
+    Documentação em Português: https://docs.python.org/pt-br/3/
+    Variables - https://www.w3schools.com/python/python_variables.asp
+    Data Types - https://www.w3schools.com/python/python_datatypes.asp
+    Operators - https://www.w3schools.com/python/python_operators.asp
+    PEP8 - https://peps.python.org/pep-0008/
 
-Outros:
-    https://www.w3schools.com/python/python_variables.asp
-    https://www.w3schools.com/python/python_datatypes.asp
-    https://www.w3schools.com/python/python_operators.asp
+===============================================================================
+
+Aula 02 - Lists and Tuples
+
+Lists (listas): sequencia de valores, lembrando que o primeiro elemento começa com 0, conseguimos mexer na lista.
+    variavel = ["Dado 1","Dado 2"]
+
+Tuples (lista): uma lista que não tem os métodos, não conseguimos editar, geralmente usamos para dias da semana ou meses.
+    variavel = ("Dado 1", "Dado 2")
+
+Materiais de Apoio:
+    Lists - https://www.w3schools.com/python/python_lists.asp
+    Tuples - https://www.w3schools.com/python/python_tuples.asp
+
+===============================================================================
+
+Aula 03 - Dictionaries (Dicts)
+
+Dictionaries - Dicts (dicionários): coleção com elementos 
+    variavel = {
+        "Chave 1": valor,
+        "Chave 2": valor,
+        "Chave 3": valor
+    }
+
+Materiais de Apoio:
+    https://www.w3schools.com/python/python_dictionaries.asp
+
+===============================================================================
+
+Aula 04 - 
