@@ -1,6 +1,7 @@
 Aula 1 - Variables, Data Types and Operators
 
 Variables (variável): armazena valores (dados) e reutilizar esses valores no nosso código.
+    
 
 Data Types ():
 
