@@ -38,9 +38,7 @@ Materiais de Apoio:
 
 ===============================================================================
 
-Aula 03 - Dictionaries (Dicts)
-
-Dictionaries - Dicts (dicionários): coleção com elementos.
+Aula 03 - Dictionaries / Dicts (dicionários): coleção com elementos.
 
 Anatomia:
     variavel = {
@@ -61,9 +59,7 @@ Materiais de Apoio:
 
 ===============================================================================
 
-Aula 05 - Functions (funções)
-
-Functions (funções): linhas de códigos que executa uma função (tarefa) que pode ser reutilizada dentro do meu código, sendo flexível e modular; não gera um retorno ou saída.
+Aula 05 - Functions (funções): linhas de códigos que executa uma função (tarefa) que pode ser reutilizada dentro do meu código, sendo flexível e modular; não gera um retorno ou saída.
 
 Anatomia:
     Definindo a função:
@@ -77,9 +73,7 @@ Materiais de Apoio:
 
 ===============================================================================
 
-Aula 06 - Return (retorno)
-
-Return (retorno): gera um output, gera um retorno ou uma saída podendo ser usado numa variável.
+Aula 06 - Return (retorno): gera um output, gera um retorno ou uma saída podendo ser usado numa variável.
 
 Anatomia:
     Definindo a função:
@@ -94,9 +88,7 @@ Materiais de Apoio:
 
 ===============================================================================
 
-Aula 07 - Control Flow (controle de fluxo)
-
-Control Flow (controle de fluxo): controle de condicionais.
+Aula 07 - Control Flow (controle de fluxo): controle de condicionais.
 
 Anatomia:
     if [condição]:
@@ -111,4 +103,14 @@ Anatomia:
 
 ===============================================================================
 
-Aula 08
+Aula 08 - For Loop (laços de repetição): estruturas de repetição.
+
+Anatomia:
+    for [item] in [lista]:
+        [comando]
+
+Materiais de Apoio:
+    https://www.w3schools.com/python/python_for_loops.asp
+    https://www.w3schools.com/python/python_while_loops.asp
+
+===============================================================================
