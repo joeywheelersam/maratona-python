@@ -63,16 +63,33 @@ Materiais de Apoio:
 
 Aula 05 - Functions (funções)
 
-Functions (funções): linhas de códigos que executa uma função (tarefa) que pode ser reutilizada dentro do meu código, sendo flexível e modular.
+Functions (funções): linhas de códigos que executa uma função (tarefa) que pode ser reutilizada dentro do meu código, sendo flexível e modular; não gera um retorno ou saída.
 
 Anatomia:
     Definindo a função:
-        def [nome] (inputs) :
+        def [nome](inputs) :
             [comandos]   
     Chamando a função:
-        [nome] (inputs)
+        [nome](inputs)
 
 Materiais de Apoio:
     https://www.w3schools.com/python/python_functions.asp
+
+===============================================================================
+
+Aula 06 - Return (retorno)
+
+Return (retorno): gera um output, gera um retorno ou uma saída podendo ser usado numa variável.
+
+Anatomia:
+    Definindo a função:
+        def [nome](inputs) :
+            [comandos]
+            return variável
+    Chamando a função:
+        [variável] = [nome](inputs)
+
+Materiais de Apoio:
+https://www.w3schools.com/python/gloss_python_function_return_value.asp
 
 ===============================================================================
