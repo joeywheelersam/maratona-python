@@ -1,4 +1,5 @@
 print ()                            imprime na tela mensagem de texto ou resultado da variável.
+print (f"Olá {variáveis}")          consigo imprimir as variáveis dentro das aspas duplas do print.
 variável=input("[Mensagem]")        solicita ao usuário digitar uma informação dentro da variável, salva como string.
 variável=int(input("[Mensagem]"))   solicita ao usuário digitar uma informação dentro da variável, salva como int.
 type(variável)                      informa o tipo da variável.

@@ -1,6 +1,6 @@
 def welcome (name):
-    msg = "Olá " + name.title()
-    print (msg)
+    msg = name.title()
+    print (f"Olá {msg}")
 
 student = input ("Diga seu nome: ")
 welcome(student)
