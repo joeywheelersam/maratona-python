@@ -17,7 +17,7 @@ def join_two_lists (lista1, lista2):
     return lista1 + lista2
 
 def get_the_biggest (lista):
-    return max(lista, key=int)
+    return max(lista)
 
 def count_in_list (chave, lista):
     return lista.count(chave)
