@@ -1,11 +1,14 @@
-print () = imprime na tela mensagem de texto ou resultado da variável.
-type(variável) = informa o tipo da variável.
-str (variável) = converte qualquer variável para o tipo de string.
-int(variável) = converte qualquer variável para o tipo numérico.
-len(lista) = verifica o tamanho de uma lista.
-lista.append(valor) = acrescenta um valor no final da lista.
-lista.insert (índice,valor) = acrescenta um valor no índice escolhida
-lista.pop(índice) = remove um valor da lista buscando pelo índice.
-lista.remove(valor) = remove um valor da lista buscando pelo próprio valor.
-lista.reverse() = inverte os valores da lista.
-print(valor in lista) = verificamos se o valor está na lista, retorna True ou False.
+print ()                            imprime na tela mensagem de texto ou resultado da variável.
+variável=input ("[Mensagem]")       solicita ao usuário digitar uma informação dentro da variável.
+type(variável)                      informa o tipo da variável.
+str (variável)                      converte qualquer variável para o tipo de string.
+int(variável)                       converte qualquer variável para o tipo numérico.
+len(lista)                          verifica o tamanho de uma lista.
+lista.append(valor)                 acrescenta um valor no final da lista.
+lista.insert (índice,valor)         acrescenta um valor no índice escolhida
+lista.pop(índice)                   remove um valor da lista buscando pelo índice.
+lista.remove(valor)                 remove um valor da lista buscando pelo próprio valor.
+lista.reverse()                     inverte os valores da lista.
+print(valor in lista)               verificamos se o valor está na lista, retorna True ou False.
+variável.capitalize()               coloca apenas primeira letra da string em maiúscula (Jomar ferreira).
+variável.title()                    coloca todas as primeiras letras da string em maiúscula (Jomar Ferreira).

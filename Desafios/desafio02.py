@@ -1,4 +1,6 @@
 def welcome (name):
-    welcome_msg = "Olá" + name
-    print (welcome_msg)
+    msg = "Olá " + name.title()
+    print (msg)
 
+student = input ("Diga seu nome: ")
+welcome(student)
