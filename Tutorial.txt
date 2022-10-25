@@ -109,8 +109,11 @@ Anatomia:
     for [item] in [lista]:
         [comando]
 
+    Break: ele para a execução do for (sempre dentro do if).
+    Continue: ele não executa os comandos do for e retornar ao for (sempre dentro do if).
+
 Materiais de Apoio:
     https://www.w3schools.com/python/python_for_loops.asp
     https://www.w3schools.com/python/python_while_loops.asp
 
-=============================================================================== 
+===============================================================================
