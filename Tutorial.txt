@@ -90,6 +90,25 @@ Anatomia:
         [variável] = [nome](inputs)
 
 Materiais de Apoio:
-https://www.w3schools.com/python/gloss_python_function_return_value.asp
+    https://www.w3schools.com/python/gloss_python_function_return_value.asp
 
 ===============================================================================
+
+Aula 07 - Control Flow (controle de fluxo)
+
+Control Flow (controle de fluxo): controle de condicionais.
+
+Anatomia:
+    if [condição]:
+        [comando]
+    elif [condição]:
+        [comando]
+    else:
+        [comando]
+
+​Materiais de Apoio:
+    https://www.w3schools.com/python/python_conditions.asp
+
+===============================================================================
+
+Aula 08
