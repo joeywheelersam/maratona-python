@@ -1,5 +1,6 @@
 print ()                            imprime na tela mensagem de texto ou resultado da variável.
-variável=input ("[Mensagem]")       solicita ao usuário digitar uma informação dentro da variável.
+variável=input("[Mensagem]")        solicita ao usuário digitar uma informação dentro da variável, salva como string.
+variável=int(input("[Mensagem]"))   solicita ao usuário digitar uma informação dentro da variável, salva como int.
 type(variável)                      informa o tipo da variável.
 str (variável)                      converte qualquer variável para o tipo de string.
 int(variável)                       converte qualquer variável para o tipo numérico.
