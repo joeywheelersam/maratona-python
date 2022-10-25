@@ -24,10 +24,13 @@ Materiais de Apoio:
 Aula 02 - Lists and Tuples
 
 Lists (listas): sequencia de valores, lembrando que o primeiro elemento começa com 0, conseguimos mexer na lista.
-    variavel = ["Dado 1","Dado 2"]
-
 Tuples (lista): uma lista que não tem os métodos, não conseguimos editar, geralmente usamos para dias da semana ou meses.
-    variavel = ("Dado 1", "Dado 2")
+
+Anatomia:
+    Lists
+        variavel = ["Dado 1","Dado 2"]
+    Tuples
+        variavel = ("Dado 1", "Dado 2")
 
 Materiais de Apoio:
     Lists - https://www.w3schools.com/python/python_lists.asp
@@ -37,7 +40,9 @@ Materiais de Apoio:
 
 Aula 03 - Dictionaries (Dicts)
 
-Dictionaries - Dicts (dicionários): coleção com elementos 
+Dictionaries - Dicts (dicionários): coleção com elementos.
+
+Anatomia:
     variavel = {
         "Chave 1": valor,
         "Chave 2": valor,
@@ -49,4 +54,25 @@ Materiais de Apoio:
 
 ===============================================================================
 
-Aula 04 - 
+Aula 04 - Built-in Functions
+
+Materiais de Apoio:
+    https://www.w3schools.com/python/python_ref_functions.asp
+
+===============================================================================
+
+Aula 05 - Functions (funções)
+
+Functions (funções): linhas de códigos que executa uma função (tarefa) que pode ser reutilizada dentro do meu código, sendo flexível e modular.
+
+Anatomia:
+    Definindo a função:
+        def [nome] (inputs) :
+            [comandos]   
+    Chamando a função:
+        [nome] (inputs)
+
+Materiais de Apoio:
+    https://www.w3schools.com/python/python_functions.asp
+
+===============================================================================
