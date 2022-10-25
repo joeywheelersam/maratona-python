@@ -55,34 +55,34 @@ print (answer)
 print ()
 
 # Na variavel order, insira no dicionário as seguintes keys e values:
-## order_id = 1337
-## order_value = 12.40
-## customer_email = contato@maratonapython.com.br
-## customer_phone = 112233445
-## customer_zip_code = 989222-119
+  # order_id = 1337
+  # order_value = 12.40
+  # customer_email = contato@maratonapython.com.br
+  # customer_phone = 112233445
+  # customer_zip_code = 989222-119
 order = {
   "order_id" : 1337,
   "order_value" : 12.40,
   "customer_email" : "contato@maratonapython.com.br",
-  "customer_phone" : 112233445,
-  "customer_zip_code" : 989222-119
+  "customer_phone" : "(11)2233445",
+  "customer_zip_code" : "989222-119"
 }
 print (order)
 print ()
 
 # Com base no dict order (criado acima), imprima o valor da key "customer_email".
-print(order['customer_email'])
+print(order["customer_email"])
 print ()
 
 # Com base no dict order (criado acima), imprima o valor da key "order_id".
-print(order['order_id'])
+print(order["order_id"])
 print ()
 
 # Com base no dict order (criado acima), adicione uma nova key chamada status com o value string de "delivered" (usando apenas 1 linha).
 order["status"] = "delivered"
 
 # Com base no dict order (criado acima), imprima o valor da key "status".
-print(order['status'])
+print(order["status"])
 print ()
 
 # Abaixo está criada uma lista com alguns alunos da Maratona Python e vamos agora trabalhar um pouco com ela.
@@ -91,12 +91,12 @@ print (students)
 print ()
 
 # Ops! Esqueci do aluno Michael. Adicione ele na última posição da lista. OBS - Não altere a declaração da lista! Adicione o aluno na lista students com uma linha de código nova, utilizando uma função.
-students.append('Michael')
+students.append("Michael")
 print (students)
 print ()
 
 # Ops! A Luiza saiu do projeto. Remova a Luiza da lista.
-students.remove('Luiza')
+students.remove("Luiza")
 print (students)
 print ()
 
@@ -105,20 +105,20 @@ print(len(students))
 print ()
 
 # No print faça uma operação para verificar se a "Bruno" está na lista students.
-print('Bruno' in students)
+print("Bruno" in students)
 print ()
 
 # No print faça uma operação para verificar se a "Luiza" está na lista students.
-print('Luiza' in students)
+print("Luiza" in students)
 print ()
 
 # No print imprima a lista students em ordem reversa (reverse).
+# print(students[::-1])
 students.reverse()
 print(students)
 print ()
 
 # Atribua à variável answer o valor da variável (option_a ou option_b) que tiver a resposta correta da pergunta apresentada no print:
-
 print("De onde vem o print() e o len()?")
 option_a = "Da Python Standard library"
 option_b = "Do além"
