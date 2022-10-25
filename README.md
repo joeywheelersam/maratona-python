@@ -8,3 +8,4 @@ Repositório da Maratona Python que realizei no Técnicas de Invasão.
 
 ## Desafio
 1. [Desafio 01](https://github.com/joeywheelersam/maratona-python/blob/master/Desafios/desafio01.py)
+2. [Desafio 02](https://github.com/joeywheelersam/maratona-python/blob/master/Desafios/desafio02.py)
