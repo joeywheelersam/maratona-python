@@ -28,9 +28,9 @@ Tuples (lista): uma lista que não tem os métodos, não conseguimos editar, ger
 
 Anatomia:
     Lists
-        variavel = ["Dado 1","Dado 2"]
+        [variável] = ["Dado 1","Dado 2"]
     Tuples
-        variavel = ("Dado 1", "Dado 2")
+        [variável] = ("Dado 1", "Dado 2")
 
 Materiais de Apoio:
     Lists - https://www.w3schools.com/python/python_lists.asp
@@ -41,7 +41,7 @@ Materiais de Apoio:
 Aula 03 - Dictionaries / Dicts (dicionários): coleção com elementos.
 
 Anatomia:
-    variavel = {
+    [variável] = {
         "Chave 1": valor,
         "Chave 2": valor,
         "Chave 3": valor
