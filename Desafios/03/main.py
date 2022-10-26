@@ -1,8 +1,27 @@
+def add_food (nome=0, descricao=0):
+  ##Arrumar os ifs para quando for descricao==0, da forma que está entra no primeiro if
+  if type(nome)==int or type(descricao)==int:
+    if type(nome)==int and type(descricao)==int:
+      print ("Ambos os valores precisam ser do tipo string")
+    elif type(nome)==int:
+      print ("Nome precisa ser do tipo string.")
+    else:
+        print ("Descrição precisa ser do tipo string.")
+    print ("###########################")
+  # E não nesse elif
+  elif descricao == 0:
+    print ("Você precisa passar o nome da comida + descrição.")
+    print ("###########################")
+  # Realizar as buscar na lista para validar se precisa ou não cadastrar a comida na lista.
+  elif nome!=0 and descricao!=0:
+    print ("Comida e descrição existe.")
+    print ("###########################")
+  else:
+    print ("Falha.")
+
 
 
 # use esta parte de cima para declarar a 4 funções #
-
-
 #####################################################
 #####!! NÃO EDITE O CÓDIGO ABAIXO DESTA LINHA !!#####
 
@@ -19,7 +38,7 @@ food_list = {
 #####################################
 
 # ADD_FOOD - TESTE 1
-print("\n#### ADD_FOOD - TESTE 1")
+print("\n#### ADD_FOOD - TESTE 1 ####")
 print("Usando add_food com valores sendo int")
 print("add_food(100, 23)\n")
 #excuta:
