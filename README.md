@@ -7,5 +7,6 @@ Repositório da Maratona Python que realizei no Técnicas de Invasão.
 2. [Tutorial](https://github.com/joeywheelersam/maratona-python/blob/master/Tutorial.txt)
 
 ## Desafio
-1. [Desafio 01](https://github.com/joeywheelersam/maratona-python/blob/master/Desafios/desafio01.py)
-2. [Desafio 02](https://github.com/joeywheelersam/maratona-python/blob/master/Desafios/desafio02.py)
+1. [Desafio 01](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/01)
+2. [Desafio 02](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/02)
+3. [Desafio 03](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/03)
