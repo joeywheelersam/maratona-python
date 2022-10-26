@@ -91,11 +91,11 @@ Materiais de Apoio:
 Aula 07 - Control Flow (controle de fluxo): controle de condicionais.
 
 Anatomia:
-    if [condição]:
+    if [condição]:              * se
         [comando]
-    elif [condição]:
+    elif [condição]:            * se não, se
         [comando]
-    else:
+    else:                       * se não
         [comando]
 
 ​Materiais de Apoio:
@@ -115,5 +115,25 @@ Anatomia:
 Materiais de Apoio:
     https://www.w3schools.com/python/python_for_loops.asp
     https://www.w3schools.com/python/python_while_loops.asp
+
+===============================================================================
+
+Aula 09 - Modules (módulos): cada arquivo em .py é um módulo e cada módulo tem um conjunto de funções.
+
+Packages (pacotes): coleção de módulos.
+
+Anatomia:
+    import [módulo]                                 * Importa todas as funções do módulo
+        [módulo].[função](parâmetros)               * Chamar a função
+    from [módulo] import [função1],[função2]        * Importa apenas uma função do módulo
+        [função](parâmetro)                         * Chamar a função
+
+    Obs.: Caso eu queira trocar o nome da função por um outro nome
+            from [módulo] import [função] as [nome_novo]
+            [nome_novo](parâmetro)  
+
+​Materiais de Apoio:
+    https://www.w3schools.com/python/python_modules.asp
+    https://pypi.org/
 
 ===============================================================================
