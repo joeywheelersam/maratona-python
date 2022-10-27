@@ -1,25 +1,101 @@
-def add_food (nome=0, descricao=0):
-  ##Arrumar os ifs para quando for descricao==0, da forma que está entra no primeiro if
-  if type(nome)==int or type(descricao)==int:
-    if type(nome)==int and type(descricao)==int:
-      print ("Ambos os valores precisam ser do tipo string")
-    elif type(nome)==int:
-      print ("Nome precisa ser do tipo string.")
-    else:
-        print ("Descrição precisa ser do tipo string.")
-    print ("###########################")
-  # E não nesse elif
-  elif descricao == 0:
-    print ("Você precisa passar o nome da comida + descrição.")
-    print ("###########################")
-  # Realizar as buscar na lista para validar se precisa ou não cadastrar a comida na lista.
-  elif nome!=0 and descricao!=0:
-    print ("Comida e descrição existe.")
-    print ("###########################")
+# Função Create recebendo dois parâmetros de comida e decrição
+from pydoc import describe
+
+
+def add_food (comida=0, descricao="0"):
+  # If verifica se pelo menos um dos parâmetros são inteiro, teste 1
+  if type(comida)==int or type(descricao)==int:
+    print ("Ambos os valores precisam ser do tipo string.")
+    print ("#####################################")
+  # Elif verifica se um dos parâmetros está nulo, teste 2
+  elif descricao=="0":
+    print ("Você precisa passar o nome da comida e descrição.")
+    print ("#####################################")
+  # Else caso os dois parâmetros sejam string
   else:
-    print ("Falha.")
+    # Buscar comida no dicionário
+    result = comida in food_list
+    # If para verificar se a comida está no dicionário, teste 3
+    if result==True:
+      print (f"{comida.capitalize()} já está cadastrado no dicionário.")
+      print ("#####################################")
+    # Else caso a comida não exista e fazendo o cadastro no dicionário, teste 4
+    else:
+      food_list[comida] = descricao
+      print (f"{comida.capitalize()} cadastrado com sucesso.")
+      print ("#####################################")
 
+# Função Read recebendo um parâmetro de comida
+def get_food (comida="0"):
+  # If verifica se a comida é inteiro, teste 1
+  if type(comida)==int:
+    print ("O nome da comida precisa ser do tipo string.")
+    print ("#####################################")
+  # Elif verifica se o parâmetro está nulo, teste 2
+  elif comida=="0":
+    print ("Você precisa passar o nome da comida para consultar a descrição.")
+    print ("#####################################")
+  # Else caso o parâmetro seja string
+  else:
+    # Buscar comida no dicionário
+    result = comida in food_list
+    # If caso não encontre a comida no dicionário, teste 3
+    if result==False:
+      print (f"{comida.capitalize()} não existe no dicionário.")
+      print ("#####################################")
+    # Else caso a comida exista e deletando a comida no dicionário, teste 4
+    else:
+      descricao = food_list[comida]
+      print (f"A descrição de {comida.capitalize()} é {descricao.capitalize()}.")
+      print ("#####################################")
 
+# Função Update recebendo dois parâmetros de comida e decrição
+def update_food (comida=0, descricao="0"):
+  # If verifica se pelo menos um dos parâmetros são inteiro, teste 1
+  if type(comida)==int or type(descricao)==int:
+    print ("Ambos os valores precisam ser do tipo string.")
+    print ("#####################################")
+  # Elif verifica se um dos parâmetros está nulo, teste 2
+  elif descricao=="0":
+    print ("Você precisa passar o nome da comida e descrição.")
+    print ("#####################################")
+  # Else caso os dois parâmetros sejam string
+  else:
+    # Buscar comida no dicionário
+    result = comida in food_list
+    # If caso não encontre a comida no dicionário, teste 3
+    if result==False:
+      print (f"{comida.capitalize()} não existe no dicionário.")
+      print ("#####################################")
+    # Else caso a comida exista e deletando a comida no dicionário, teste 4
+    else:
+      food_list[comida] = descricao
+      print (f"{comida.capitalize()} descrição atualizada para: {descricao.capitalize()}.")
+      print ("#####################################")
+
+# Função Delete recebendo um parâmetro de comida
+def delete_food (comida="0"):
+  # If verifica se a comida é inteiro, teste 1
+  if type(comida)==int:
+    print ("O nome da comida precisa ser do tipo string.")
+    print ("#####################################")
+  # Elif verifica se o parâmetro está nulo, teste 2
+  elif comida=="0":
+    print ("Você precisa passar o nome da comida.")
+    print ("#####################################")
+  # Else caso o parâmetro seja string
+  else:
+    # Buscar comida no dicionário
+    result = comida in food_list
+    # If caso não encontre a comida no dicionário, teste 3
+    if result==False:
+      print (f"{comida.capitalize()} não existe no dicionário.")
+      print ("#####################################")
+    # Else caso a comida exista e deletando a comida no dicionário, teste 4
+    else:
+      del food_list[comida]
+      print (f"{comida.capitalize()} foi deletado com sucesso.")
+      print ("#####################################")
 
 # use esta parte de cima para declarar a 4 funções #
 #####################################################
@@ -33,9 +109,9 @@ food_list = {
   'hamburguer': 'comida dos USA'
 }
 
-#####################################
-######## TESTES ADD_FOOD #########
-#####################################
+#################################
+######## TESTES ADD_FOOD ########
+#################################
 
 # ADD_FOOD - TESTE 1
 print("\n#### ADD_FOOD - TESTE 1 ####")
@@ -64,7 +140,6 @@ print("Usando add_food adicionando uma comida.")
 print("add_food('lasanha', 'Camadas de massa e molho')\n")
 #excuta:
 add_food('lasanha', 'Camadas de massa e molho')
-
 
 #####################################
 ######## TESTES DELETE_FOOD #########
@@ -99,7 +174,7 @@ print("delete_food('paçoquinha')\n")
 delete_food('paçoquinha')
 
 #####################################
-## TESTES UPDATE_FOOD ##
+######## TESTES UPDATE_FOOD #########
 #####################################
 
 # UPDATE_FOOD - TESTE 1
@@ -123,7 +198,6 @@ print("update_food('sorvete', 'Um doce gelado da italia')\n")
 #excuta:
 update_food('sorvete', 'Um doce gelado da italia')
 
-
 # UPDATE_FOOD - TESTE 4
 print("\n#### UPDATE_FOOD - TESTE 4")
 print("Usando update_food e atualizando uma comida.")
@@ -131,9 +205,9 @@ print("update_food('brigadeiro', 'Melhor doce do mundo.')\n")
 #excuta:
 update_food('brigadeiro', 'Melhor doce do mundo.')
 
-#####################################
-## TESTES GET_FOOD ##
-#####################################
+###################################
+######## TESTES GET_FOOD ##########
+###################################
 
 # GET_FOOD - TESTE 1
 print("\n#### GET_FOOD - TESTE 1")
@@ -146,25 +220,24 @@ get_food(505)
 print("\n#### GET_FOOD - TESTE 2")
 print("Usando get_food sem passar a comida.")
 print("get_food()\n")
-
+#executa
 get_food()
 
 # GET_FOOD - TESTE 3
 print("\n#### GET_FOOD - TESTE 3")
 print("Usando get_food com comida não existente.")
 print("get_food('noodle')\n")
+#executa
 get_food('noodle')
 
 # GET_FOOD - TESTE 4
 print("\n#### GET_FOOD - TESTE 4")
 print("Usando get_food e pesquisando a descrição uma comida.")
 print("get_food('hamburguer')\n")
+#executa
 get_food('hamburguer')
 
-
 #####!!!!!!!!!!!!!! THE END !!!!!!!!!!!!!!#####
-
-
 ## Linha de Chegada ##
 print("\n Winners win")
 print(u"\U0001F40D" + " Maratona Python")
