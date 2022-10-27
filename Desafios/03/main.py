@@ -1,7 +1,4 @@
 # Função Create recebendo dois parâmetros de comida e decrição
-from pydoc import describe
-
-
 def add_food (comida=0, descricao="0"):
   # If verifica se pelo menos um dos parâmetros são inteiro, teste 1
   if type(comida)==int or type(descricao)==int:
