@@ -1,11 +1,11 @@
 # Função Create recebendo dois parâmetros de comida e decrição
-def add_food (comida=0, descricao="0"):
+def add_food (comida="0", descricao="0"):
   # If verifica se pelo menos um dos parâmetros são inteiro, teste 1
   if type(comida)==int or type(descricao)==int:
     print ("Ambos os valores precisam ser do tipo string.")
     print ("#####################################")
   # Elif verifica se um dos parâmetros está nulo, teste 2
-  elif descricao=="0":
+  elif comida=="0" or descricao=="0":
     print ("Você precisa passar o nome da comida e descrição.")
     print ("#####################################")
   # Else caso os dois parâmetros sejam string
@@ -47,13 +47,13 @@ def get_food (comida="0"):
       print ("#####################################")
 
 # Função Update recebendo dois parâmetros de comida e decrição
-def update_food (comida=0, descricao="0"):
+def update_food (comida="0", descricao="0"):
   # If verifica se pelo menos um dos parâmetros são inteiro, teste 1
   if type(comida)==int or type(descricao)==int:
     print ("Ambos os valores precisam ser do tipo string.")
     print ("#####################################")
   # Elif verifica se um dos parâmetros está nulo, teste 2
-  elif descricao=="0":
+  elif comida=="0" or descricao=="0":
     print ("Você precisa passar o nome da comida e descrição.")
     print ("#####################################")
   # Else caso os dois parâmetros sejam string
