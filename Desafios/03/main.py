@@ -10,10 +10,8 @@ def add_food (comida="0", descricao="0"):
     print ("#####################################")
   # Else caso os dois parâmetros sejam string
   else:
-    # Buscar comida no dicionário
-    result = comida in food_list
     # If para verificar se a comida está no dicionário, teste 3
-    if result==True:
+    if comida in food_list:
       print (f"{comida.capitalize()} já está cadastrado no dicionário.")
       print ("#####################################")
     # Else caso a comida não exista e fazendo o cadastro no dicionário, teste 4
@@ -34,10 +32,8 @@ def get_food (comida="0"):
     print ("#####################################")
   # Else caso o parâmetro seja string
   else:
-    # Buscar comida no dicionário
-    result = comida in food_list
     # If caso não encontre a comida no dicionário, teste 3
-    if result==False:
+    if comida not in food_list:
       print (f"{comida.capitalize()} não existe no dicionário.")
       print ("#####################################")
     # Else caso a comida exista e deletando a comida no dicionário, teste 4
@@ -58,10 +54,8 @@ def update_food (comida="0", descricao="0"):
     print ("#####################################")
   # Else caso os dois parâmetros sejam string
   else:
-    # Buscar comida no dicionário
-    result = comida in food_list
     # If caso não encontre a comida no dicionário, teste 3
-    if result==False:
+    if comida not in food_list:
       print (f"{comida.capitalize()} não existe no dicionário.")
       print ("#####################################")
     # Else caso a comida exista e deletando a comida no dicionário, teste 4
@@ -82,10 +76,8 @@ def delete_food (comida="0"):
     print ("#####################################")
   # Else caso o parâmetro seja string
   else:
-    # Buscar comida no dicionário
-    result = comida in food_list
     # If caso não encontre a comida no dicionário, teste 3
-    if result==False:
+    if comida not in food_list:
       print (f"{comida.capitalize()} não existe no dicionário.")
       print ("#####################################")
     # Else caso a comida exista e deletando a comida no dicionário, teste 4
@@ -138,37 +130,37 @@ print("add_food('lasanha', 'Camadas de massa e molho')\n")
 #excuta:
 add_food('lasanha', 'Camadas de massa e molho')
 
-#####################################
-######## TESTES DELETE_FOOD #########
-#####################################
+###################################
+######## TESTES GET_FOOD ##########
+###################################
 
-# DELETE_FOOD - TESTE 1
-print("\n#### DELETE_FOOD - TESTE 1")
-print("Usando delete_food com valor sendo int")
-print("delete_food(100)\n")
+# GET_FOOD - TESTE 1
+print("\n#### GET_FOOD - TESTE 1")
+print("Usando get_food com valor sendo int")
+print("get_food(505)\n")
 #excuta:
-delete_food(100)
+get_food(505)
 
-# DELETE_FOOD - TESTE 2
-print("\n#### DELETE_FOOD - TESTE 2")
-print("Usando delete_food sem nenhum valor.")
-print("delete_food()\n")
-#excuta:
-delete_food()
+# GET_FOOD - TESTE 2
+print("\n#### GET_FOOD - TESTE 2")
+print("Usando get_food sem passar a comida.")
+print("get_food()\n")
+#executa
+get_food()
 
-# DELETE_FOOD - TESTE 3
-print("\n#### DELETE_FOOD - TESTE 3")
-print("Usando delete_food com comida que não existe na lista.")
-print("delete_food('massa')\n")
-#excuta:
-delete_food('massa')
+# GET_FOOD - TESTE 3
+print("\n#### GET_FOOD - TESTE 3")
+print("Usando get_food com comida não existente.")
+print("get_food('noodle')\n")
+#executa
+get_food('noodle')
 
-# DELETE_FOOD - TESTE 4
-print("\n#### DELETE_FOOD - TESTE 4")
-print("Usando delete_food removendo uma comida.")
-print("delete_food('paçoquinha')\n")
-#excuta:
-delete_food('paçoquinha')
+# GET_FOOD - TESTE 4
+print("\n#### GET_FOOD - TESTE 4")
+print("Usando get_food e pesquisando a descrição uma comida.")
+print("get_food('hamburguer')\n")
+#executa
+get_food('hamburguer')
 
 #####################################
 ######## TESTES UPDATE_FOOD #########
@@ -202,37 +194,40 @@ print("update_food('brigadeiro', 'Melhor doce do mundo.')\n")
 #excuta:
 update_food('brigadeiro', 'Melhor doce do mundo.')
 
-###################################
-######## TESTES GET_FOOD ##########
-###################################
+#####################################
+######## TESTES DELETE_FOOD #########
+#####################################
 
-# GET_FOOD - TESTE 1
-print("\n#### GET_FOOD - TESTE 1")
-print("Usando get_food com valor sendo int")
-print("get_food(505)\n")
+# DELETE_FOOD - TESTE 1
+print("\n#### DELETE_FOOD - TESTE 1")
+print("Usando delete_food com valor sendo int")
+print("delete_food(100)\n")
 #excuta:
-get_food(505)
+delete_food(100)
 
-# GET_FOOD - TESTE 2
-print("\n#### GET_FOOD - TESTE 2")
-print("Usando get_food sem passar a comida.")
-print("get_food()\n")
-#executa
-get_food()
+# DELETE_FOOD - TESTE 2
+print("\n#### DELETE_FOOD - TESTE 2")
+print("Usando delete_food sem nenhum valor.")
+print("delete_food()\n")
+#excuta:
+delete_food()
 
-# GET_FOOD - TESTE 3
-print("\n#### GET_FOOD - TESTE 3")
-print("Usando get_food com comida não existente.")
-print("get_food('noodle')\n")
-#executa
-get_food('noodle')
+# DELETE_FOOD - TESTE 3
+print("\n#### DELETE_FOOD - TESTE 3")
+print("Usando delete_food com comida que não existe na lista.")
+print("delete_food('massa')\n")
+#excuta:
+delete_food('massa')
 
-# GET_FOOD - TESTE 4
-print("\n#### GET_FOOD - TESTE 4")
-print("Usando get_food e pesquisando a descrição uma comida.")
-print("get_food('hamburguer')\n")
-#executa
-get_food('hamburguer')
+# DELETE_FOOD - TESTE 4
+print("\n#### DELETE_FOOD - TESTE 4")
+print("Usando delete_food removendo uma comida.")
+print("delete_food('paçoquinha')\n")
+#excuta:
+delete_food('paçoquinha')
+
+print()
+print (food_list)
 
 #####!!!!!!!!!!!!!! THE END !!!!!!!!!!!!!!#####
 ## Linha de Chegada ##
