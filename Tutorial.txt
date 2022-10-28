@@ -121,6 +121,12 @@ Materiais de Apoio:
 Aula 09 - Modules (módulos): cada arquivo em .py é um módulo e cada módulo tem um conjunto de funções.
 
 Packages (pacotes): coleção de módulos.
+    https://pypi.org/                       * Local onde encontra os pacotes.
+    
+    pip freeze                              * Quais pacotes estão instalados.
+    pip install [package]                   * Instala um pacote.
+    pip install --upgrade [package]         * Atualiza um pacote.
+    pip uninstall [package] -y              * Desinstala um pacote.
 
 Anatomia:
     import [módulo]                                 * Importa todas as funções do módulo
@@ -134,6 +140,25 @@ Anatomia:
 
 ​Materiais de Apoio:
     https://www.w3schools.com/python/python_modules.asp
-    https://pypi.org/
+
+===============================================================================
+
+Aula 10 - Web Scraper: coleta de dados na web.
+
+===============================================================================
+
+Aula 11 - Requests
+
+Anatomia:
+    import requests
+    url = "https://www.globo.com"
+    r = requests.get(url)
+    print (r.status_code)               * Imprime o Status Code
+    print (r.headers)                   * Imprime o Headers
+    print (r.text)                      * Imprime o Text em HTML
+
+Materiais de Apoio:
+    Packages do Requests: https://pypi.org/project/requests/
+    Documentação do Requests: https://requests.readthedocs.io/en/master/
 
 ===============================================================================
