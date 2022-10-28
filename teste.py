@@ -2,10 +2,28 @@
 ##### Arquivo em Python apenas para testar as aulas #####
 #########################################################
 
-import requests
+import subprocess
+import os
+import sys
+os.system('cls' if os.name == 'nt' else 'clear')
 
-url = "https://www.globo.com"
-r = requests.get(url)
-print (r.status_code)
-print (r.headers)
-print (r.text)
+resultado=input("Fechar programa? ")
+# Fecha programa
+if resultado=="s" or resultado=="S":
+    print ("Resposta SIM.")
+    input ()
+    sys.exit()
+# Não fecha o programa
+elif resultado=="n" or resultado=="N":
+    print ("Resposta NÃO.")
+    input ()
+    if __name__ == '__main__':
+      cmd = r"python teste.py"
+      subprocess.call(cmd, shell=True)
+# Resposta errada
+else:
+    print ("Resposta ERRADA")
+    input ()
+    if __name__ == '__main__':
+      cmd = r"python teste.py"
+      subprocess.call(cmd, shell=True)
