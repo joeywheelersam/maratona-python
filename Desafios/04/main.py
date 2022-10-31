@@ -1,32 +1,50 @@
-# Para formatar os valores você pode usar .lower() e .strip()
-# Para criar uma lista com os valores recebidos, você pode usar o .split()
-# Você pode percorrer uma lista e interagir com cada item com o For Loop
-# Aprenda a tratar erros da execução do Requests usando try: e except:
-# Tratar os dados informado pelo usuário como gerar a url com o http:// e remover espaços em branco
-# https://form.typeform.com/to/hao5dWiF?typeform-source=of8xwd4rhwy.typeform.com
+# Função para formatar a lista colocando o https, www ou os dois tipos
+# Função também tornar os dados minúsculo e separa os valores das urls
+def formatar_lista (lista):
+    for lista in lista.lower().split(","):
+        lista = lista.strip()
+        if "http://www." in lista:
+            url.append(lista)
+        elif "www." in lista:
+            url.append("http://"+lista)
+        else:
+            url.append("http://www."+lista)
 
-import requests
+# Função para testar as URLs e imprime na tela os resultados
+def testando (url):
+    for solicitar in url:
+        if ".com" in solicitar:
+            try:
+                r = requests.get(solicitar)
+                if (r.status_code == 200):
+                    print (f"{solicitar} - Site online. - {r.status_code}")
+                else:
+                    print(f"{solicitar} - Site offline. - {r.status_code}")
+            except:
+                print (f"{solicitar} - URL inválida.")
+        else:
+            print (f"{solicitar} - URL inválida.")
 
-url = []
-resposta=True
-for resposta in True:
-    resposta = input ("Resposta: ")
+import requests, subprocess, os, sys
 
-
-print ("Bem-vindo ao verificador de sites 1.0!")
-resposta = input ("Insira as URLs dos sites que dejesa verificar o status (separe por vírgula): ")
-url = resposta.lower().split(",")
-
-#r = requests.get(url)
-#if (r.status_code == 200):
-#    print (f"{url} - Site online.")
-#else:
-#    print (f"{url} - Site offline")
-#print (r.status_code)
-
-# Verificar se existe .com ou .com.br na requisição que o usuário solicitou.
-#print ("URL inválida.")
-# Estrutura de repetição, validar para o usuário digitar apenas s, S, n ou N.
-#print ("Precisa verificar mais algum site? s/n")
-# Caso digite não
-#print ("Programa encerrado.")
+# Repetidor para fechar o programa ou abrir novamente caso o usuário queira
+# A lista vai se repetir de forma vazia
+contador = 0
+while contador == 0:
+    url = []
+    print ("Bem-vindo ao verificador de sites 1.0!")
+    resposta = input ("Insira as URLs dos sites que dejesa verificar o status (separe por vírgula): ")
+    print ("\n###############################")
+    formatar_lista(resposta)
+    testando(url)
+    print ("###############################\n")
+    while contador == 0:
+        resposta = input ("Precisa verificar mais algum site? s/n: ")
+        if resposta == "s" or resposta == "S":
+            os.system('cls' if os.name == 'nt' else 'clear')
+            break
+        elif resposta == "n" or resposta == "N":
+            print ("Programa encerrado.")
+            contador = 1
+        else:
+            print ("Valor inválido")
