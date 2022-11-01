@@ -38,11 +38,11 @@ while contador == 0:
     testando_url(url)
     print ("###############################\n")
     while contador == 0:
-        resposta = input ("Precisa verificar mais algum site? s/n: ")
-        if resposta == "s" or resposta == "S":
+        resposta = input ("Precisa verificar mais algum site? s/n: ").lower()
+        if resposta == "s":
             os.system('cls' if os.name == 'nt' else 'clear')
             break
-        elif resposta == "n" or resposta == "N":
+        elif resposta == "n":
             print ("Programa encerrado.")
             contador = 1
         else:
