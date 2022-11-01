@@ -1,5 +1,5 @@
 # Função para formatar a lista colocando o https://www quando necessário e deixando em minúsculo
-def formatar_lista (lista):
+def formatar_url (lista):
     for lista in lista.lower().split(","):
         lista = lista.strip()
         if "http://www." in lista:
@@ -10,8 +10,8 @@ def formatar_lista (lista):
             url.append("http://www."+lista)
 
 # Função para testar as URLs e imprime na tela os resultados
-def testando (url):
-    for solicitar in url:
+def testando_url (site):
+    for solicitar in site:
         if ".com" in solicitar:
             try:
                 r = requests.get(solicitar)
@@ -34,8 +34,8 @@ while contador == 0:
     print ("Bem-vindo ao verificador de sites 1.0!")
     resposta = str (input ("Insira as URLs dos sites que dejesa verificar o status (separe por vírgula): "))
     print ("\n###############################")
-    formatar_lista(resposta)
-    testando(url)
+    formatar_url(resposta)
+    testando_url(url)
     print ("###############################\n")
     while contador == 0:
         resposta = input ("Precisa verificar mais algum site? s/n: ")
