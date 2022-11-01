@@ -12,3 +12,4 @@ Repositório da Maratona Python que realizei no Técnicas de Invasão.
 3. [Desafio 03](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/03)
 4. [Desafio 04](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/04)
    <br>Requerimento: python -m pip install requests
+5. [Desafio 05](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/05)
