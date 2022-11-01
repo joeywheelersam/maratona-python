@@ -6,7 +6,9 @@ Repositório da Maratona Python que realizei no Técnicas de Invasão.
 1. [Comandos](https://github.com/joeywheelersam/maratona-python/blob/master/Comandos.txt)
 2. [Tutorial](https://github.com/joeywheelersam/maratona-python/blob/master/Tutorial.txt)
 
-## Desafio
+## Desafios
 1. [Desafio 01](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/01)
 2. [Desafio 02](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/02)
 3. [Desafio 03](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/03)
+4. [Desafio 04](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/04)
+   <br>Requerimento: python -m pip install requests
