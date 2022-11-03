@@ -200,7 +200,6 @@ Materiais de Apoio:
 
 Aula 13 - Fazendo o Scrapping
 
-
 Materiais de Apoio:
     URL do Indeed: https://br.indeed.com/empregos-de-python
 
