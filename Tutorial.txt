@@ -195,6 +195,7 @@ Materiais de Apoio:
     Documentação em Português: https://www.crummy.com/software/BeautifulSoup/bs4/doc.ptbr/
     Packages do Beautiful Soup: https://pypi.org/project/beautifulsoup4/
     Documentação de HTML: https://pensandonaweb.com.br/aprendendo-html-a-linguagem-da-web/
+    Documentação HTML Table: http://www.linhadecodigo.com.br/artigo/3439/introducao-ao-html-usando-tabelas-em-html.aspx
 
 ===============================================================================
 
