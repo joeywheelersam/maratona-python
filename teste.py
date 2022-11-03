@@ -1,23 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "http://www.globo.com"
+url = "https://br.indeed.com/empregos-de-python?vjk=e584562a7bd71a63"
 r = requests.get (url)
 html = r.text
-soup = BeautifulSoup(html, 'html.parser')
+soup = BeautifulSoup(html, "html.parser")
 
-# Deixa bonito o html
-print(soup.prettify())
-
-# Pega o title do html
-print (soup.title)
-
-# Pesquisa por todos "a", pode colocar na lista e trabalhar com ela
-print (soup.find_all('a'))
-
-# Pesquisa por uma id expecifica
-print (soup.find(id="globalWebdepsScript"))
-
-# Pegando os links do "a"
-for link in soup.find_all('a'):
-    print(link.get('href'))
+cards = soup.find_all("div", class_="job_seen_beacon")
+print (r.status_code)

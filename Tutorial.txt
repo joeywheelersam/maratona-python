@@ -197,3 +197,11 @@ Materiais de Apoio:
     Documentação de HTML: https://pensandonaweb.com.br/aprendendo-html-a-linguagem-da-web/
 
 ===============================================================================
+
+Aula 13 - Fazendo o Scrapping
+
+
+Materiais de Apoio:
+    URL do Indeed: https://br.indeed.com/empregos-de-python
+
+===============================================================================
