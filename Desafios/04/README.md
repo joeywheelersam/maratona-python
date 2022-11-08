@@ -1,26 +1,26 @@
 # Verificador de Sites 1.0
 This application accesses the urls and checks if the status code is 200, giving it as online, if the status code is different from 200, it informs that the site is offline.
 ## Source Code
-You can also download Verificador de Sites 1.0 directly from its [Git repository](https://github.com/joeywheelersam/maratona-python.git):
+You can also download [Verificador de Sites 1.0](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/04) directly from its [Git repository](https://github.com/joeywheelersam/maratona-python.git):
 
 ```
-$ git clone https://github.com/joeywheelersam/maratona-python.git
+git clone https://github.com/joeywheelersam/maratona-python.git
 ```
 
 ## Dependencies
-Verificador de Sites 1.0 works out of the box with [Python 3.10](https://www.python.org/downloads/release/python-3100/) on any platform and requires the following packages:
+[Verificador de Sites 1.0](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/04) works out of the box with [Python 3.10](https://www.python.org/downloads/release/python-3100/) on any platform and requires the following packages:
 - [Requests 2.28.1+](https://pypi.org/project/requests/)
 
 ## Installation
+How to install dependencies:
 ```
-$  pip install requests
+pip install requests
 ```
 
 ## Usage
-Para executar o programa
-
+How to run the program:
 ```
-$  python main.py
+python main.py
 ```
 
 ## License
@@ -34,4 +34,4 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-{c:red}Verificador de Sites 1.0{/c} is free software, keeping the picture can USE AND ABUSE 
+[Verificador de Sites 1.0](https://github.com/joeywheelersam/maratona-python/tree/master/Desafios/04) is free software, keeping the picture can USE AND ABUSE 
