@@ -1,7 +1,8 @@
-import requests
+import requests, os
 from bs4 import BeautifulSoup
 
 def menu():
+    os.system('cls' if os.name == 'nt' else 'clear')
     choice = str(input("Precisa verificar mais algum site? s/n ")).lower()
     if choice == "s" or choice =="n":
         if choice == "n":
@@ -15,20 +16,21 @@ def menu():
 
 
 def main ():
-    print ("Bem-vindo ao Negociador de Moedas 1.0")
-    print ("Escolha pelo número da lista o país que deseja consultar o código da moeda")
-
+    # Criando o Beautiful Soup
     url = "https://www.iban.com/currency-codes"
     r = requests.get (url)
     html = r.text
     soup = BeautifulSoup(html, "html.parser")
 
-    cards = soup.find_all("tbody")
+    print ("Bem-vindo ao Negociador de Moedas 1.0")
+    print ()
+    print ("Escolha pelo número da lista o país que deseja consultar o código da moeda")
 
+    cards = soup.find_all("tbody")
     for card in cards:
         print (card.find("td"))
         break
-    
+
     menu()
 main()
 
