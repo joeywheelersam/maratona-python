@@ -1,3 +1,5 @@
+import requests, os
+
 # Função para formatar a lista colocando o https://www quando necessário e deixando em minúsculo
 def formatar_url (lista):
     for lista in lista.lower().split(","):
@@ -24,11 +26,9 @@ def testando_url (site):
         else:
             print (f"{solicitar} - URL inválida.")
 
-import requests, os
-contador = 0
-
 # Repetidor para fechar o programa ou abrir novamente caso o usuário queira
 # A lista sempre vai se repetir de forma vazia
+contador = 0
 while contador == 0:
     url = []
     print ("Bem-vindo ao verificador de sites 1.0!")
