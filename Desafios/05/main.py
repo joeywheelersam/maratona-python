@@ -1,14 +1,6 @@
 import requests, os
 from bs4 import BeautifulSoup
 
-# Criei essa função para limpar a string com os caracteres especiais
-def limpando (texto):
-    remover = "[<td>]/ " 
-    for remover in remover:
-        texto = texto.replace(remover, "")
-    return texto
-
-# Função menu
 def menu():
     os.system('cls' if os.name == 'nt' else 'clear')
     choice = str(input("Precisa verificar mais algum site? s/n: ")).lower()
@@ -22,24 +14,34 @@ def menu():
         input ("Opção inválida!\nTecle enter para digitar novamente!")
         menu()
 
-# Função main
+def limpandoString (texto):
+    caracteres = "[<td>]/ " 
+    for caracteres in caracteres:
+        texto = texto.replace(caracteres, "")
+    return texto
+
+def criarDicionario (sopa, lista):
+    for card in sopa:
+        sopa = limpandoString(str(card.find_all("td"))).split(',')
+        print (sopa[1])
+        
+
+
 def main ():
     os.system('cls' if os.name == 'nt' else 'clear')
-    # Criando o Beautiful Soup
     url = "https://www.iban.com/currency-codes"
     soup = BeautifulSoup(requests.get(url).text, "html.parser")
-    
-    # Coletando informações na URL
-    cards = soup.find_all("tr")
     update = str (soup.find("p").next_sibling).replace("\n", "")
-
+    cards = soup.find_all("tr")
+    lista = []
+    criarDicionario (cards, lista)
+    print (lista)    
     print ("Bem-vindo ao Negociador de Moedas 1.0")
     print (update + " da " + url)
     input ("Tecle enter para iniciar o programa!")
     os.system('cls' if os.name == 'nt' else 'clear')
     resposta = input("Escolha pelo número da lista o país que deseja consultar o código da moeda: ")
-
-    menu()
+    #menu()
 main()
 
 # view-source:https://www.iban.com/currency-codes
