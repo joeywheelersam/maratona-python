@@ -1,13 +1,6 @@
 import requests, os
 from bs4 import BeautifulSoup
 
-# Menu de Boas vindas
-def menu (update):
-    print ("Bem-vindo ao Negociador de Moedas 1.0")
-    print (update + " da " + url)
-    input ("Tecle enter para iniciar o programa!")
-    os.system('cls' if os.name == 'nt' else 'clear')
-
 # Função que formata o texto da URL
 def formatacao (texto):
     caracteres = "[<td>]/ " 
@@ -16,7 +9,7 @@ def formatacao (texto):
     return texto
 
 # Função que cria o database com todos os dados necessários da URL
-def database (sopa, moedas):
+def database (sopa):
     for texto in sopa:
         nome = ["cidade", "moeda", "código", "numero"]
         sopa = formatacao(str(texto.find_all("td"))).split(",")
@@ -30,8 +23,6 @@ def database (sopa, moedas):
             continue
         moedas.append (dicionario)
 
-# Nouniversalcurrency
-
 # Programa principal
 moedas = []      
 url = "https://www.iban.com/currency-codes"
@@ -39,18 +30,31 @@ soup = BeautifulSoup(requests.get(url).text, "html.parser")
 update = str (soup.find("p").next_sibling).replace("\n", "")
 cards = soup.find_all("tr")
 del cards[0] # Deletei o primeiro item da lista porque o valor chegou vazio.
+database(cards)
 
-#menu (update)
-database(cards, moedas)
+# Menu informando o nome do aplicativo
+print ("Bem-vindo ao Negociador de Moedas 1.0")
+print (update + " da " + url)
+print ("Escolha pelo número da lista o país que deseja consultar a moeda.")
+input ("Tecle enter para iniciar o programa!")
+os.system('cls' if os.name == 'nt' else 'clear')
 
+# Lista todas as moedas cadastradas
+for numero, lista in enumerate(moedas):
+        print (f"#{numero} - {lista['cidade']}")
 
+# Validação da solicitação do usuário
+while True:
+    try:
+        resposta = int(input ("#: "))
+        if (resposta <= len(moedas)):
+            break
+        else:
+            print ("Não existe, escolha uma opção da lista!")
+            continue
+    except ValueError:
+        print("Isso não é um número")
 
-# view-source:https://www.iban.com/currency-codes
-# Link do formulário de entrega: https://form.typeform.com/to/oig2ytw1
-
-# Imprimir a lista => print(#[número] - [Nome do País])
-# A input do usuário deve ser apenas números e não pode ser maior do que a listagem do menu (opções do menu).
-# Validar para quando digitar letras, apenas aceitar números => print("Isso não é um número")
-# Validar valores maiores que o tamanho da lista => print("Não existe, escolha uma opção da lista!")
-# Use try: / except: quando converter a input do usuário para int.
-# Após o usuário selecionar um país, informe o código da moeda daquele país => print (Você escolheu [país] e o código da moeda é [código])
+# Imprime na tela a solicitação do usuário
+print ("Você escolheu o "+moedas[resposta].get("cidade"))
+print ("O código da moeda é "+moedas[resposta].get("código"))
