@@ -25,12 +25,18 @@ def database (sopa):
 
 # Programa principal
 moedas = []      
+
+# Requisição a URL
 url = "https://www.iban.com/currency-codes"
 soup = BeautifulSoup(requests.get(url).text, "html.parser")
+
+# Capturando as informações necessárias da URL
 update = str (soup.find("p").next_sibling).replace("\n", "")
-cards = soup.find_all("tr")
-del cards[0] # Deletei o primeiro item da lista porque o valor chegou vazio.
-database(cards)
+tabela = soup.find_all("tr")
+del tabela[0] # Deletei o primeiro item da lista porque o valor chegou vazio.
+
+# Criando o database 
+database(tabela)
 
 # Menu informando o nome do aplicativo
 print ("Bem-vindo ao Negociador de Moedas 1.0")
