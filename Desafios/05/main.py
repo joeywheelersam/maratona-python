@@ -54,13 +54,11 @@ while True:
     try:
         resposta = int(input ("#: "))
         if (resposta <= len(moedas)):
+            print ("Você escolheu o "+ moedas[resposta].get("cidade"))
+            print ("O código da moeda é "+ moedas[resposta].get("código"))
             break
         else:
             print ("Não existe, escolha uma opção da lista!")
             continue
     except ValueError:
         print("Isso não é um número")
-
-# Imprime na tela a solicitação do usuário
-print ("Você escolheu o "+moedas[resposta].get("cidade"))
-print ("O código da moeda é "+moedas[resposta].get("código"))
