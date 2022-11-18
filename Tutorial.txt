@@ -206,7 +206,24 @@ Materiais de Apoio:
 
 ===============================================================================
 
-Aula 14 - 
+Aula 14 - Nosso código flexível e modular
 
+Código feito para Atualização do Indeed:
+    https://replit.com/@brunofragame/aula6-correcao#main.py
+
+===============================================================================
+
+Aula 15 - Código Atualizado:
+    https://replit.com/@brunofragame/aula7-correcao#indeed.py
+
+===============================================================================
+
+Aula 16 - Código Atualizado
+    https://replit.com/@brunofragame/aula8-correcao#main.py
+
+===============================================================================
+
+Aula 17 - CÓDIGO FINAL:
+    https://replit.com/@brunofragame/aula9-correcao#main.py
 
 ===============================================================================

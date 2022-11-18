@@ -1,29 +1,21 @@
-import requests, os
+import requests
 from bs4 import BeautifulSoup
 
-def limpandoString (texto):
-    caracteres = "[<td>]/ " 
-    for caracteres in caracteres:
-        texto = texto.replace(caracteres, "")
-    return texto
+def scrapping_indeed (url):
+    r_indeed = requests.get (url)
+    html_indeed = r_indeed.text
+    soup = BeautifulSoup (html_indeed, 'html.parser')
+    cards = soup.find_all ('div', class_="result")
+    jobs = []
+    for card in cards:
+        job = {
+            'title': card.find('a').find('span').get('title'),
+            'company': card.find('span', class_='companyName').get_text(),
+            'location': card.find('div', class_='companyLocation').string,
+            'how_old': card.find('span', class_='date').get_text(),
+            'link': f"https://br.indeed.com{card.find('a').get('href')}"
+        }
+        jobs.append(job)
+    return jobs
 
-def criarLista (sopa, moedas):
-    for texto in sopa:
-        nome = ["cidade", "moeda", "código", "numero"]
-        sopa = limpandoString(str(texto.find_all("td"))).split(",")
-        dicionario = dict()
-        for chave, valor in zip(nome, sopa):
-                print (valor)
-                if chave == "cidade" or chave == "código":
-                    dicionario [chave] = valor
-        print (dicionario)
-        input ("###")
-        moedas.append (dicionario)
-
-moedas = []      
-url = "https://www.iban.com/currency-codes"
-soup = BeautifulSoup(requests.get(url).text, "html.parser")
-cards = soup.find_all("tr")
-del cards[0]
-
-criarLista(cards, moedas)
+print (scrapping_indeed("https://br.indeed.com/empregos+de+python"))
