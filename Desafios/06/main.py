@@ -53,7 +53,7 @@ for numero, lista in enumerate(moedas):
 # Validação da solicitação do usuário
 while True:
     try:
-        resposta = int(input ("#: "))
+        resposta = int(input ("Informe pelo número o país de origem da moeda: "))
         if (resposta <= len(moedas)):
             print ("Você escolheu o "+ moedas[resposta].get("cidade"))
             print ("O código da moeda é "+ moedas[resposta].get("código"))
@@ -64,7 +64,7 @@ while True:
     except ValueError:
         print("Isso não é um número")
 
-
+# print ("Infor")
 
 # Link do formulário de entrega: https://form.typeform.com/to/FplJEfwQ​
 # Para isso vamos fazer um scrapping na Wise informando os códigos e quantidade via URL. (https://wise.com/gb/currency-converter/brl-to-usd-rate?amount=50)
