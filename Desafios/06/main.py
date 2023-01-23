@@ -1,3 +1,5 @@
+# Link do formulário de entrega: https://form.typeform.com/to/FplJEfwQ​
+
 import requests, os
 from bs4 import BeautifulSoup
 from babel.numbers import format_currency
@@ -64,9 +66,13 @@ while True:
     except ValueError:
         print("Isso não é um número")
 
-# print ("Infor")
 
-# Link do formulário de entrega: https://form.typeform.com/to/FplJEfwQ​
+# origem = input (Informe pelo número o país de origem da moeda: )
+# Informar o que selecionou
+# destino = input (Quer negociar com qual outro país: )
+# Informar o que selecionou (com os dois resultados)
+# resposta = input (Quantos [origem_codigo] você quer converter para [destino_codigo]: )
+# Informar formatado: [Valor que pediu para converter] é igual a [Resposta convertida]
 # Para isso vamos fazer um scrapping na Wise informando os códigos e quantidade via URL. (https://wise.com/gb/currency-converter/brl-to-usd-rate?amount=50)
 # O programa deve permitir que o usuário selecione 2 países da lista (origem e destino) e informe a quantidade que deseja converter entre moedas.
 # Envie os códigos das moedas dos países selecionados + quantia de conversão para o site da TransferWise via URL: Exemplo: https://wise.com/gb/currency-converter/brl-to-usd-rate?amount=5
